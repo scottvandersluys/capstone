@@ -1,3 +1,4 @@
+export { AuthSignIn } from './AuthSignIn/AuthSignIn';
 export { AuthSignUp } from './AuthSignUp/AuthSignUp';
 export { Button } from './Button/Button';
 export { Categories } from './Categories/Categories';

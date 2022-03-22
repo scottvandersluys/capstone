@@ -28,7 +28,6 @@ const AuthSignUp = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log(formFields)
 
     if (password !== confirmPassword) {
       alert("PASSWORDS DO NOT MATCH");
