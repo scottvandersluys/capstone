@@ -1,12 +1,14 @@
 import { useContext } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import { signOutUser } from '../../utilities/firebase/firebase.utils';
-import { UserContext } from '../../contexts';
+import { ShoppingBagContext, UserContext } from '../../contexts';
+import { ShoppingBagDropdown, ShoppingBagLink } from '..';
 import { ReactComponent as Logo } from '../../assets/crown.svg';
 import './Header.scss';
 
 const Header = () => {
   const { currentUser } = useContext(UserContext);
+  const { isShoppingBagOpen } = useContext(ShoppingBagContext);
 
   return (
     <>
@@ -24,7 +26,9 @@ const Header = () => {
                 Sign In
               </Link>
           }
+          <ShoppingBagLink />
         </div>
+        { isShoppingBagOpen && <ShoppingBagDropdown /> }
       </header>
       <Outlet />
     </>

@@ -5,3 +5,6 @@ export { Categories } from './Categories/Categories';
 export { Category } from './Category/Category';
 export { FormInput } from './FormInput/FormInput';
 export { Header } from './Header/Header';
+export { ProductCard } from './ProductCard/ProductCard';
+export { ShoppingBagLink } from './ShoppingBagLink/ShoppingBagLink';
+export { ShoppingBagDropdown } from './ShoppingBagDropdown/ShoppingBagDropdown';
