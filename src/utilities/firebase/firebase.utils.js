@@ -1,5 +1,13 @@
 import { initializeApp } from 'firebase/app';
-import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
+import { 
+  createUserWithEmailAndPassword, 
+  getAuth,
+  onAuthStateChanged,
+  signInWithEmailAndPassword, 
+  signInWithPopup, 
+  signOut,
+  GoogleAuthProvider
+} from 'firebase/auth';
 import { doc, getDoc, setDoc, getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
@@ -26,7 +34,7 @@ export const db = getFirestore();
 
 export const createUserDocument = async (user, additionalInformation) => {
   if (!user) return;
-
+console.log("ADDITIONAL", additionalInformation)
   const { uid } = user;
 
   const userDocRef = doc(db, "users", uid);
@@ -35,6 +43,8 @@ export const createUserDocument = async (user, additionalInformation) => {
   if (!userSnapshot.exists()) {
     const { displayName, email } = user;
     const createdAt = new Date();
+    const docItem = { createdAt, displayName, email, ...additionalInformation };
+    console.log('DOCITEM', docItem)
 
     try {
       await setDoc(userDocRef, {
@@ -61,4 +71,12 @@ export const signUpWithEmail = async (email, password) => {
   if (!email || !password) return;
 
   return await createUserWithEmailAndPassword(auth, email, password);
+};
+
+export const signOutUser = async () => await signOut(auth);
+
+export const onAuthStateChangedListener = (callback) => {
+  if (!callback) return;
+
+  onAuthStateChanged(auth, callback);
 };

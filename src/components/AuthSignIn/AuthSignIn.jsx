@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { createUserDocument, signInWithEmail, signInWithGooglePopup } from "../../utilities/firebase/firebase.utils";
+import { signInWithEmail, signInWithGooglePopup } from "../../utilities/firebase/firebase.utils";
 import { Button, FormInput } from '..';
 import './AuthSignIn.scss';
 
@@ -17,8 +17,7 @@ const AuthSignIn = () => {
   };
 
   const signInWithGoogle = async () => {
-    const { user } = await signInWithGooglePopup();
-    await createUserDocument(user);
+    await signInWithGooglePopup();
   }
 
   const handleChange = (event) => {
@@ -52,6 +51,7 @@ const AuthSignIn = () => {
     <form onSubmit={handleSubmit}>
 
       <FormInput
+        id="sign-in-email"
         label="Email"
         name= "email"
         type="email"
@@ -61,6 +61,7 @@ const AuthSignIn = () => {
       />
 
       <FormInput
+        id="sign-in-password"
         label="Password"
         name="password"
         type="password"
