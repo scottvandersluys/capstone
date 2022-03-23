@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import { signOutUser } from '../../utilities/firebase/firebase.utils';
-import { UserContext } from '../../contexts/user.context';
+import { UserContext } from '../../contexts';
 import { ReactComponent as Logo } from '../../assets/crown.svg';
 import './Header.scss';
 
