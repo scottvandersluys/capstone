@@ -4,7 +4,6 @@
   height: 340px;
   display: flex;
   flex-direction: column;
-  padding: 20px;
   border: 1px solid black;
   background-color: white;
   top: 90px;
@@ -17,7 +16,7 @@
   }
 
   .shopping-bag-items {
-    height: 240px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     overflow: auto;

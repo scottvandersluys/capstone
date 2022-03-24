@@ -6,5 +6,6 @@ export { Category } from './Category/Category';
 export { FormInput } from './FormInput/FormInput';
 export { Header } from './Header/Header';
 export { ProductCard } from './ProductCard/ProductCard';
-export { ShoppingBagLink } from './ShoppingBagLink/ShoppingBagLink';
 export { ShoppingBagDropdown } from './ShoppingBagDropdown/ShoppingBagDropdown';
+export { ShoppingBagItem } from './ShoppingBagItem/ShoppingBagItem';
+export { ShoppingBagLink } from './ShoppingBagLink/ShoppingBagLink';
