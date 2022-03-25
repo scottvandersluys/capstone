@@ -1,14 +1,14 @@
 import { AuthSignIn, AuthSignUp } from '../../components';
-import './Authentication.scss';
+import './AuthPage.scss';
 
-const Authentication = () => {
+const AuthPage = () => {
 
   return (
-    <div className="Authentication">
+    <div className="AuthPage">
       <AuthSignIn />
       <AuthSignUp />
     </div>
   );
 };
 
-export { Authentication };
+export { AuthPage };

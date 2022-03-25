@@ -1,12 +1,12 @@
 import { useContext } from 'react';
 import { ShoppingBagContext } from '../../contexts';
 import { CheckoutItem } from '../../components';
-import './Checkout.scss';
+import './CheckoutPage.scss';
 
-const Checkout = () => {
+const CheckoutPage = () => {
   const { shoppingBagItems, totalShoppingBagPrice } = useContext(ShoppingBagContext);
   return (
-    <div className="Checkout">
+    <div className="CheckoutPage">
       <div className="checkout-header">
         <div className="checkout-heading">
           <span>Product</span>
@@ -34,4 +34,4 @@ const Checkout = () => {
   );
 };
 
-export { Checkout };
+export { CheckoutPage };

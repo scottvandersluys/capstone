@@ -1,4 +1,4 @@
-import { Categories } from "../../components";
+import { Directory } from "../../components";
 
 const CATEGORIES_DATA = [
   {
@@ -28,10 +28,10 @@ const CATEGORIES_DATA = [
   }
 ];
 
-const Home = () => {
+const HomePage = () => {
   return (
-    <Categories data={CATEGORIES_DATA} />
+    <Directory data={CATEGORIES_DATA} />
   );
 }
 
-export { Home };
+export { HomePage };

@@ -1,4 +1,4 @@
-export { Authentication } from './Auth/Authentication';
-export { Checkout } from './Checkout/Checkout';
-export { Home } from './Home/Home';
-export { Shop } from './Shop/Shop';
+export { AuthPage } from './AuthPage/AuthPage';
+export { CheckoutPage } from './CheckoutPage/CheckoutPage';
+export { HomePage } from './HomePage/HomePage';
+export { ShopPage } from './ShopPage/ShopPage';
