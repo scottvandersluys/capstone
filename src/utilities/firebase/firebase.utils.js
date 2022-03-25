@@ -17,8 +17,7 @@ import {
   setDoc,
   getFirestore,
   query,
-  writeBatch,
-  QuerySnapshot
+  writeBatch
 } from 'firebase/firestore';
 
 const firebaseConfig = {
@@ -30,7 +29,7 @@ const firebaseConfig = {
   appId: "1:912389005150:web:418881402e1906baf0b9cf"
 };
 
-const firebaseApp = initializeApp(firebaseConfig);
+initializeApp(firebaseConfig);
 
 const provider = new GoogleAuthProvider();
 
